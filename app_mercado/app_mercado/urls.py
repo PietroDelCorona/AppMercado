@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app_mercado.views import home
+from .views import home, google_authenticate
 
 urlpatterns = [
     path('', home, name='home'),  # URL para a página inicial
+    path('google-auth/', google_authenticate, name='google_authenticate'), # URL para a página de autenticação
     path('admin/', admin.site.urls),  # URL para a interface de administração do Django
 ]

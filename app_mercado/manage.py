@@ -2,7 +2,13 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from dotenv import load_dotenv
 
+# Carrega variáveis de ambiente do arquivo .env
+load_dotenv()
+
+# Obtém o valor do CLIENT_SECRET do arquivo .env
+CLIENT_SECRET = os.getenv('CLIENT_SECRET')
 
 def main():
     """Run administrative tasks."""
